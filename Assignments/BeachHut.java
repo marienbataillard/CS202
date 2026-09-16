@@ -17,13 +17,35 @@ public class BeachHut extends JPanel {
         var h = getHeight();
         g.fillRect(0, 0, w, h);
 
-        //mountains
+        //mountain 1
         g.setColor(new Color(124,83,55));
-        int[] xPoints = { 50, 100, 75};
-        int[] yPoints = { 50, 50, 20};
+        int[] xPoints = { 250, -100, -50};
+        int[] yPoints = { 250, 250, 100};
         int nPoints = 3;
         g.fillPolygon(xPoints, yPoints, nPoints);
 
+        //mountain 2
+        g.setColor(new Color(171,144,114));
+        int[] gPoints = { 250, 200, 50};
+        int[] hPoints = { 250, 250, 100};
+        int rPoints = 3;
+        g.fillPolygon(gPoints, hPoints, rPoints);
+
+        //FOLIAGE
+        g.setColor(new Color (77,78,34));
+        g.fillOval(300, 100, 50, 50);
+
+        //FOLIAGE
+        g.setColor(new Color (77,78,34));
+        g.fillOval(260, 120, 50, 50);
+
+        //FOLIAGE
+        g.setColor(new Color (77,78,34));
+        g.fillOval(340, 120, 50, 50);
+
+        //sand
+        g.setColor(new Color(234, 200, 175));
+        g.fillRect(0, 250, w, h);
 
     }
 void main() {
