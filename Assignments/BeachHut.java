@@ -31,17 +31,26 @@ public class BeachHut extends JPanel {
         int rPoints = 3;
         g.fillPolygon(gPoints, hPoints, rPoints);
 
-        //FOLIAGE
+        //trunk
+        g.setColor(new Color (66,57,38));
+        g.fillRect(315, 130, 20, 150);
+
+        //FOLIAGE 1
         g.setColor(new Color (77,78,34));
         g.fillOval(300, 100, 50, 50);
 
-        //FOLIAGE
+        //FOLIAGE 2
         g.setColor(new Color (77,78,34));
-        g.fillOval(260, 120, 50, 50);
+        g.fillOval(280, 120, 45, 45);
 
-        //FOLIAGE
+        //FOLIAGE 3
         g.setColor(new Color (77,78,34));
-        g.fillOval(340, 120, 50, 50);
+        g.fillOval(320, 120, 50, 50);
+
+        //FOLIAGE 4
+        g.setColor(new Color (77,78,34));
+        g.fillOval(290, 130, 65, 50);
+
 
         //sand
         g.setColor(new Color(234, 200, 175));
