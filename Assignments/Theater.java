@@ -12,6 +12,8 @@ public class Theater extends JPanel  {
     ImageIcon moana;
     ImageIcon grogu;
     ImageIcon daisy;
+    
+//Class section with field variables
     public Theater() {
         String input = JOptionPane.showInputDialog("What is your age?");
         age = Integer.parseInt(input);
@@ -26,26 +28,31 @@ public class Theater extends JPanel  {
     }
         @Override
         public void paintComponent(Graphics g) {
-            
+    //Under 3
              if (age >= 0 && age < 3) {
                 g.drawString ("You get in free!", 20, 280);
                 toystory.paintIcon (null, g, 10, 10); 
                 } 
+    //Between 3 and 11
             else if (age >= 3 && age <=11) {
                 g.drawString ("You owe $7.00", 20, 280);
                 moana.paintIcon(null, g, 10, 10);
             }
+    //Between 11 and 60
             else if (age > 11 && age < 60 && id == JOptionPane.NO_OPTION) {
                 g.drawString("You owe $10.00!", 20, 280);
                 grogu.paintIcon(null, g, 20, 20);
             }
+    //Between 60 and 120
             else if (age >= 60 && age < 120) {
                 g.drawString("That will be $7:00", 20, 280);
                 daisy.paintIcon(null, g, 20, 20);
             } 
+    //Absurd ages
             else if (age < 0 || age >= 120) {
                 g.drawString("Are you sure you typed that correctly?", 20, 50);
             } 
+    //Discounted option
             else if (id == JOptionPane.YES_OPTION && age > 11 && age < 60) {
                 g.drawString("You owe $8.00!", 20, 280);
                 grogu.paintIcon(null, g, 20, 20);
