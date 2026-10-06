@@ -50,7 +50,7 @@ public class flag extends JPanel {
         y += starHeight; //moves the stars down to the next row.
         }
         }
-
+//adding test.
     }
 
 void main () {
