@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 
 public class flag extends JPanel {
     public flag() {
-
+   
     }
 //strip fields
         int numberOfStripes = 13;
