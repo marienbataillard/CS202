@@ -35,9 +35,9 @@ public class flag extends JPanel {
         //Local variables
         var w = getWidth();
         var h = getHeight();
-        var stripeHeight = h/stripes;
+        double stripeHeight = (double) h/stripes;
         var boxWidth = 2 * w/5;
-        var boxHeight = stripeHeight * 7;
+        int boxHeight = (int) stripeHeight * 7;
         var starWidth = boxWidth/columnStars;
         var starHeight = boxHeight/rowStars;
 
@@ -48,8 +48,11 @@ public class flag extends JPanel {
         //White Stripes
         for (int i = 1; i < stripes; i += 2) {
             g.setColor(Color.white);
-            g.fillRect(0, (int)(i * stripeHeight),
-                getWidth(), (int)stripeHeight);
+
+            int top = (int) (i*stripeHeight);
+            int bottom = (int) ((i + 1) * stripeHeight);
+
+            g.fillRect(0, top, w, bottom - top);
         }
         //Blue box
         g.setColor(Color.blue);
