@@ -4,13 +4,13 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class flag extends JPanel {
+public class Flag extends JPanel {
         //strip fields
        // int numberOfStripes = 13;
        // int rowsOfStars = 6;
        // int columnOfStars = 8;
 
-    public flag() {
+    public Flag() {
 
     }
 
@@ -35,9 +35,9 @@ public class flag extends JPanel {
         //Local variables
         var w = getWidth();
         var h = getHeight();
-        double stripeHeight = (double) h/stripes;
+        var stripeHeight = h/stripes;
         var boxWidth = 2 * w/5;
-        int boxHeight = (int) stripeHeight * 7;
+        var boxHeight = stripeHeight * 7;
         var starWidth = boxWidth/columnStars;
         var starHeight = boxHeight/rowStars;
 
@@ -56,12 +56,14 @@ public class flag extends JPanel {
         }
         //Blue box
         g.setColor(Color.blue);
-        g.fillRect(0,0, boxWidth, boxHeight);
+        g.fillRect(0, 0, boxWidth, boxHeight);
+
         //Stars Rows
         g.setColor(Color.white);
         int y = 0;
         for (int row = 0; row < rowStars; row++) {
             int x = 0; //resets it for each of the rows.
+            //star columns
             for (int column = 0; column < columnStars; column++) {
                 g.fillOval(x, y, starWidth, starHeight);
                 x += starWidth; //moves to the next column
@@ -76,7 +78,7 @@ public class flag extends JPanel {
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(600,400);
-        window.setContentPane(new flag());
+        window.setContentPane(new Flag());
         window.setVisible(true);
     }
 }
