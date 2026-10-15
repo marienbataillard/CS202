@@ -7,6 +7,12 @@ import javax.swing.JPanel;
 public class barChart extends JPanel {
 
     public barChart() {
+        //variabls
+        String[] joystick;
+        double[] totals;
+        double[] average;
+        int numPlayers = 0;
+
         //file to read.
         String filename = "scores10.csv";
         File f = new File(filename);
@@ -23,20 +29,34 @@ public class barChart extends JPanel {
             totals = new double[numJoysticks];
             average = new double[numJoysticks];
 
+            //Reads each line untile there are no more lines in the file.
+            while (s.hasNextLine()) {
+                String line = s.nextLine();
+                //Seperates the values
+                String[] values = line.split(",");
+
+                //Totals the scores and also skips player ID w/ i + 1
+                for (int i = 0; i < numJoysticks; i++) {
+                    totals[i] += Double.parseDouble(values[i + 1]);
+                }
+
+                //Counts how many players
+                numPlayers++;
+            }
+            //closes the file
             s.close();
+        
+            //calculates the average
+            for (int i = 0; i < numJoysticks; i++) {
+                average[i] = totals[i] / numPlayers;
+            }
+
         } catch (java.io.FileNotFoundException e) {
             System.out.println("File not found.");
         }
-        
-        
 
     }
-
-    String[] joystick;
-    double[] totals;
-    double[] average;
-
-
+    
     @Override
     public void paintComponent(Graphics g) {
 
