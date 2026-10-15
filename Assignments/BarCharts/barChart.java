@@ -56,7 +56,7 @@ public class barChart extends JPanel {
         }
 
     }
-    
+
     @Override
     public void paintComponent(Graphics g) {
 
