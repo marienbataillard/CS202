@@ -13,6 +13,7 @@ public class AsteroidB6122 extends JPanel {
     public AsteroidB6122() {
     //Your custom initialization code here
     mars = new LittlePrince();
+    mars.setBowtieColor(Color.PINK);
     vinay = new LittlePrince(-100, 0, Color.BLACK);
     }
 

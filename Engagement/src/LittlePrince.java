@@ -31,10 +31,9 @@ public class LittlePrince {
 
     }
 
-    public void moveBy (int x, int y) {
+    public void moveBy(int x, int y) {
         location.x += x;
         location.y += y;
-
     }
 
     public void draw(Graphics g) {
