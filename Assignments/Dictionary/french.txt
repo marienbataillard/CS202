@@ -1,0 +1,9 @@
+canard
+grenouille
+mouton
+chat
+chien
+dragon
+cheval
+ane
+ferme
