@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Dictionary",
+            "request": "launch",
+            "mainClass": "Assignments.Dictionary.Dictionary",
+            "projectName": "repository-copy_231468a"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"
