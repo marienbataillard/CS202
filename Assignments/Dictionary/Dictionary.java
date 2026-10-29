@@ -24,7 +24,7 @@ public class Dictionary extends JPanel {
         english = new ArrayList<>();
 
         try {
-            String eFile = "C:\\Users\\jgbpoidi7v_byuh\\repository-copy\\Assignments\\Dictionary\\english.txt";
+            String eFile = "C:\\Users\\jgbpoidi7v_byuh\\repository-copy\\Assignments\\Dictionary\\english.tx";
             File englishFile = new File(eFile);
 
             
